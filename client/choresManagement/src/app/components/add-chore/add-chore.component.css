@@ -1,0 +1,16 @@
+.btn-add:disabled {
+  background-color: rgb(136, 203, 241);
+  border: rgb(85, 84, 84) solid 1px;
+  font-weight: bold;
+}
+
+.btn-add {
+  background-color: rgb(88, 183, 238);
+  border: rgb(245, 242, 242) solid 1px;
+  font-weight: bold;
+}
+
+
+.inputs {
+  margin: 10px;
+}

@@ -1,0 +1,15 @@
+<h1>Vacation Trip</h1>
+<h3>click on checkbox to change filter by destination / price: </h3>
+<input  type="checkbox"  (click)='changeChkBox()'>
+<div *ngIf='filterByChkBox'>
+    <h4>filter by destination</h4>
+    <input type="text" [(ngModel)]="destinationName" >
+</div>
+<div *ngIf='!filterByChkBox'>
+    <h4>filter by min Price</h4>
+    <input  type="number" [(ngModel)]="vacationPrice">
+</div>
+<ul *ngFor="let currentVacation of vacations | practice :destinationName | price :vacationPrice">
+    <li>Destination: {{currentVacation.destination}} <br>
+    Price: {{currentVacation.price}}$</li>
+</ul>

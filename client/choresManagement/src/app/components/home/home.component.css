@@ -1,0 +1,20 @@
+.list-container {
+  overflow: scroll;
+  height: 400px;
+
+}
+
+.btn-delete {
+  background-color: rgb(235, 92, 92);
+  border: white solid 1px;
+  font-weight: bold;
+}
+.btn-add {
+  background-color: rgb(92, 183, 235);
+  border: white solid 1px;
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid black;
+}

@@ -1,0 +1,13 @@
+<h1>Add New Chore</h1>
+<a href="/home">Return to Chores Page</a>
+<form #choreForm='ngForm'>
+    
+    <input [(ngModel)]="addedChoreDetails.description" type="text" class="inputs"
+    #descriptionInput='ngModel' placeholder="type wanted chore..." name="description" required>
+    <span *ngIf="descriptionInput.touched && descriptionInput.errors?.required">Chore description is required</span><br>
+    <select class="inputs" [ngModel]="addedChoreDetails.familyMember" (ngModelChange)="onChange($event)" name="familyMember" required>
+        <option *ngFor="let familyMember of familyMembers" value="{{familyMember.id}}">{{familyMember.name}}</option>
+    </select><br>
+    <input type="button" (click)="addChore()" value="Add Chore " 
+    [disabled]='choreForm.form.invalid' class='btn-add inputs'/> 
+</form>

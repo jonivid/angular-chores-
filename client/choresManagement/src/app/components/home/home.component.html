@@ -1,0 +1,21 @@
+<h1>Chores List</h1>
+<div class="list-container">
+  <table  class="table ">
+      <tr >
+          <th>Id</th>
+          <th>Description</th>
+          <th>Date Created</th>
+          <th>Family member assigned</th>
+      </tr>
+      <tr *ngFor='let chore of chores' >
+          <td>{{chore.id}}</td>
+          <td>{{chore.description}}</td>
+          <td>{{chore.dateCreated}}</td>
+          <td>{{chore.familyMember}}</td>
+          <td><button (click)="deleteChore(chore)" name="choreIdToDelete"  class="btn-delete">Delete</button></td>
+      </tr>
+  </table>
+</div>
+<div>
+    <button (click)="addChore()" class="btn-add">Add Chore</button>
+</div>
